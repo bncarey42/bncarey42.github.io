@@ -61,7 +61,6 @@ header #motto{
 section h3{
   color: #ef5532;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 28px;
 }
 section p{
   font-size: 18px;
@@ -76,10 +75,6 @@ section p{
 .Contact a{
   text-decoration: underline;
   text-decoration-color: #ef5532;
-}
-.wrapper h3{
-  color: #ef5532;
-  font-family: "Roboto Condensed", sans-serif;
 }
 .wrapper h4{
   margin-bottom: 1px;
