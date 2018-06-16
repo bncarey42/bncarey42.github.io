@@ -47,8 +47,8 @@ header nav li{
 	font-size: 32px;
 }
 header h1{
-  font-family:
-  color: # var(--light-text-color);
+  font-family: var(--bold-font);
+  color: var(--light-text-color);
   font-size: 120px;
   margin-bottom: 0px;
 }
