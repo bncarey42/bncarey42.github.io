@@ -60,6 +60,40 @@ nav li{
   cursor: hand; /* make look like a link use both for browser compatibility*/
 }
 
-.resume-block .triangle {
+#arrow-skills,
+#arrow-relevant-experience,
+#arrow-major-projects,
+#arrow-other-experience,
+#arrow-education,
+#arrow-volunteer-experience,
+#arrow-leadership{
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
 
+button{
+  color: var(--text-color);
+  background-color: var(--accent-2);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+button:hover{
+  color: var(--accent-3);
+  background-color: var(--bg-color);
+}
+#emailForm {
+    margin:auto;
+    margin-bottom: 2em;
+    width: 50%;
+    text-align: center;
+    color: var(--bg-color);
+}
+#emailForm .twelve.columns{
+  text-align: center;
+}
+#emailForm input, textarea{
+  width: 100%;
+}
+#emailForm .twelve.columns.submit{
+  text-align: right;
 }
