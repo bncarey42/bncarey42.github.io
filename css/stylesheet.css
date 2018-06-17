@@ -16,26 +16,34 @@ body{
 h3 {
   color: var(--accent-1);
 }
-a{
+h4 {
   color: var(--accent-3);
+}
+a{
+  color: var(--accent-2);
   text-decoration: none;
 }
 a:hover{
-	color: var(--accent-1);
-  font-weight: bold;
+	color: var(--accent-3);
 }
-#nav{
+nav{
   text-align: center;
   width: 100%;
-  vertical-align: bottom;
+  vertical-align: middle;
+  height: 10%;
+  background-color: var(--accent-3);
 }
-#nav #active{
-  font-weight: bold;
+nav #active{
+  color: var(--accent-1);
 	border-bottom-color: var(--accent-2);
 	border-bottom-width: .24px;
 	border-bottom-style: solid;
 }
-#nav li{
+nav li{
 	display: inline;
 	text-transform: uppercase;
+}
+
+.resume-sec-header {
+  list-style: none;
 }
