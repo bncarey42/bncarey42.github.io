@@ -1,5 +1,6 @@
 :root{
   --bg-color: #2a3a48;
+  --bg-color-trans: RGBA(42, 58, 72, .75);
   --accent-1: #ff6900;
   --accent-2: #3e6372;
   --accent-3: #b2d4dc;
@@ -41,6 +42,9 @@ nav #active{
 nav li{
 	display: inline;
 	text-transform: uppercase;
+}
+.about {
+  margin-top: 7em;
 }
 
 .resume-block table{
