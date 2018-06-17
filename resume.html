@@ -44,9 +44,11 @@
     <!--CONTENT STARTS HERE -->
     <div class="row">
       <div class="twelve columns">
-        <span onclick=toggle_resume_text("skills") style="inline">
-          <h3>Skills</h3>
-          <div id="arrow-skills" style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid var(--accent-2);"></div>
+        <span class="resume-block" style="display: inline;" onclick="toggle_resume_text('skills')">
+          <table><tr>
+            <td><h3>Skills</h3></td>
+            <td class="triangle"><div id="arrow-skills" style="width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid var(--accent-2);"></div></td>
+          </tr></table>
         </span>
       <div id="skills" style="display: none;">
         <ul>
@@ -58,9 +60,11 @@
           <li>Experience using Adobe InDesign and Adobe Captivate for creating training and presentation resources</li>
         </ul>
       </div>
-      <span onclick=toggle_resume_text("relevant-experience")>
-        <h3>Relevant Experience</h3>
-        <div id="arrow-relevant-experience" style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid var(--accent-2);"></div>
+      <span class="resume-block" onclick=toggle_resume_text("relevant-experience")>
+        <table><tr>
+          <td><h3>Relevant Experience</h3></td>
+          <td class="triangle"><div id="arrow-relevant-experience" style="width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid var(--accent-2);"></div></td>
+        </tr></table>
       </span>
       <div id="relevant-experience" style="display: none;">
 	       <h4>Application Developer</br>
@@ -122,12 +126,14 @@
             <li>Facilitated Sound and light board programming and operation</li>
           </ul>
       </div>
-      <span onclick=toggle_resume_text("major-projects")>
-        <h3>Major Projects</h3>
-        <div id="arrow-major-projects" style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid var(--accent-2);"></div>
+      <span class="resume-block" onclick=toggle_resume_text("major-projects")>
+        <table><tr>
+          <td><h3>Major Personal Projects</h3></td>
+          <td class="triangle"><div id="arrow-major-projects" style="width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid var(--accent-2);"></div></td>
+        </tr></table>
       </span>
       <div id="major-projects" style="display: none;">
-      <h4>Marvin the Robot</br>
+        <h4>Marvin the Robot</br>
             Saint Paul College - Fall 2015</h4>
             <p>Implemented C/C++ algorithms on an embedded processor to read input
               from a number of external sensors on a robot dubbed 'Marvin'. Input
@@ -136,9 +142,11 @@
               <a href="https://youtu.be/sy8xRlEwfgg" target="_blank">https://youtu.be/sy8xRlEwfgg</a>
             </p>
       </div>
-      <span onclick=toggle_resume_text("other-experience")>
-        <h3>Other Experience</h3>
-        <div id="arrow-other-experience" style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid var(--accent-2);"></div>
+      <span class="resume-block" onclick=toggle_resume_text("other-experience")>
+        <table><tr>
+          <td><h3>Other Experience</h3></td>
+          <td class="triangle"><div id="arrow-other-experience" style="width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid var(--accent-2);"></div></td>
+        </tr></table>
       </span>
       <div id="other-experience" style="display: none;">
         <h4>Barista </br>
@@ -167,9 +175,11 @@
                 <li>Oversaw the process of establishing a more active youth ministry program</li>
               </ul>
       </div>
-      <span onclick=toggle_resume_text("education")>
-        <h3>Education</h3>
-        <div id="arrow-education" style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid var(--accent-2);"></div>
+      <span class="resume-block" onclick=toggle_resume_text("education")>
+        <table><tr>
+          <td><h3>Education</h3></td>
+          <td class="triangle"><div id="arrow-education" style="width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid var(--accent-2);"></div></td>
+        </tr></table>
       </span>
       <div id="education" style="display: none;">
         <h4>Saint Paul College - Saint Paul, Minnesota<br/>
@@ -211,9 +221,11 @@
             <li>CSCI 2442 Server Side Programming (PHP + SQL)</li>
           </ul>
       </div>
-      <span onclick=toggle_resume_text("volunteer-experience")>
-        <h3>Volunteer Experience</h3>
-        <div id="arrow-volunteer-experience" style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid var(--accent-2);"></div>
+      <span class="resume-block" onclick=toggle_resume_text("volunteer-experience")>
+        <table><tr>
+          <td><h3>Volunteer Experience</h3></td>
+          <td class="triangle"><div id="arrow-volunteer-experience" style="width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid var(--accent-2);"></div></td>
+        </tr></table>
       </span>
       <div id="volunteer-experience" style="display: none;">
           <h4>Saint John's Abbey Benedictine Volunteer Corps: May 2013 - March 2014</h4>
@@ -226,9 +238,11 @@
           youth grades 6-8. Gave witness talks and taught lessons in addition to leading team and community
           building activities</p> -->
       </div>
-      <span onclick=toggle_resume_text("leadership")>
-        <h3>Leadership and Honors</h3>
-        <div id="arrow-leadership" style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 10px solid var(--accent-2);"></div>
+      <span class="resume-block" onclick=toggle_resume_text("leadership")>
+        <table><tr>
+          <td><h3>Leadership and Honors</h3></td>
+          <td class="triangle"><div id="arrow-leadership" style="width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid var(--accent-2);"></div></td>
+        </tr></table>
       </span>
       <div id="leadership" style="display: none;">
           <h4>Saint John's Men's Chorus: Choir President: May 2012 - May 2013</h4>

@@ -3,8 +3,6 @@
   --accent-1: #ff6900;
   --accent-2: #3e6372;
   --accent-3: #b2d4dc;
-
-
   --text-color: #f5efde;
 }
 
@@ -41,4 +39,21 @@ nav #active{
 nav li{
 	display: inline;
 	text-transform: uppercase;
+}
+
+.resume-block table{
+  margin-bottom: 0px;
+}
+
+.resume-block td{
+  vertical-align: middle;
+  border-bottom: 0; /*get rid of bottom border*/
+  padding-top: 0;
+  padding-bottom: 0;
+  cursor: pointer; /* make look like a link use both for browser compatibility*/
+  cursor: hand; /* make look like a link use both for browser compatibility*/
+}
+
+.resume-block .triangle {
+  
 }
