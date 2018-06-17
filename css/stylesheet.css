@@ -10,7 +10,6 @@
 body{
   background-color: var(--bg-color);
   color: var(--text-color);
-
 }
 h3 {
   color: var(--accent-1);
@@ -25,7 +24,10 @@ a{
 }
 a:hover{
 	color: var(--accent-3);
+  -webkit-transition-duration: 1s; /* Safari */
+  transition-duration: 1s;
 }
+
 nav{
   margin-top: 1em;
   margin-bottom: 1em;
@@ -43,6 +45,7 @@ nav li{
 	display: inline;
 	text-transform: uppercase;
 }
+
 .about {
   margin-top: 7em;
 }
@@ -60,22 +63,11 @@ nav li{
   cursor: hand; /* make look like a link use both for browser compatibility*/
 }
 
-#arrow-skills,
-#arrow-relevant-experience,
-#arrow-major-projects,
-#arrow-other-experience,
-#arrow-education,
-#arrow-volunteer-experience,
-#arrow-leadership{
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-
 button{
   color: var(--text-color);
   background-color: var(--accent-2);
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.75s; /* Safari */
+  transition-duration: 0.75s;
 }
 button:hover{
   color: var(--accent-3);
