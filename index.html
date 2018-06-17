@@ -43,9 +43,16 @@
       <div class="one-half column">
         <div class="about">
           <h3>Hi I'm Ben!</h3>
-          <div id="splash" onload="load_splash()">
-            <button onclick="toggle_splash_text()" value="learn more about ben"</button>
+          <div id="splash_element" onload=load_splash()>
+            <div id="splash_msg" style="display: block";>
+              <p>Welcome! click arround! LOOK AT MY SHIT!</p>
+              <button onclick=toggle_splash_text()>learn more about ben</button>
+            </div>
+            <div id="splash_about" style="display: none";>
+              <p>Ben is a piece of shite</p>
+            </div>
           </div>
+
         </div>
         </div> <!--about-->
     </div><!--row-->

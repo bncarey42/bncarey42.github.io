@@ -28,7 +28,6 @@ a:hover{
 }
 nav{
   text-align: center;
-  width: 100%;
   vertical-align: middle;
   height: 10%;
   background-color: var(--accent-3);
@@ -36,7 +35,7 @@ nav{
 nav #active{
   color: var(--accent-1);
 	border-bottom-color: var(--accent-2);
-	border-bottom-width: .24px;
+	border-bottom-width: .15em;
 	border-bottom-style: solid;
 }
 nav li{
@@ -44,6 +43,11 @@ nav li{
 	text-transform: uppercase;
 }
 
-.resume-sec-header {
-  list-style: none;
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-left: 10px solid var(--accent-2);
 }
