@@ -1,0 +1,41 @@
+:root{
+  --bg-color: #2a3a48;
+  --accent-1: #ff6900;
+  --accent-2: #3e6372;
+  --accent-3: #b2d4dc;
+
+
+  --text-color: #f5efde;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+}
+h3 {
+  color: var(--accent-1);
+}
+a{
+  color: var(--accent-3);
+  text-decoration: none;
+}
+a:hover{
+	color: var(--accent-1);
+  font-weight: bold;
+}
+#nav{
+  text-align: center;
+  width: 100%;
+  vertical-align: bottom;
+}
+#nav #active{
+  font-weight: bold;
+	border-bottom-color: var(--accent-2);
+	border-bottom-width: .24px;
+	border-bottom-style: solid;
+}
+#nav li{
+	display: inline;
+	text-transform: uppercase;
+}

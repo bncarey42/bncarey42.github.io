@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Ben Carey </title>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Lato' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="active">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="https://github.com/bncarey42" target="_blank">work</a></li>
+        <li><a href="resume.html">resum&Eacute;</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <h1>Ben Carey</h1>
+      <h3 id="motto">
+        <a href="about.html">Live. Learn. Repeat.</a>
+      </h3>
+    </div>
+  </header>
+  <section class="wrapper">
+    <h3 id="UC"> This site is currently under reconstruction. There is still some content here so if you want to look around be my guest!</h3>
+    <p>For the time being please check out my work on my <a href="https://github.com/bncarey42">GitHub</a> profile or
+      learn more about my professional background on my <a href="https://www.linkedin.com/in/benjamintcarey">LinkedIn</a> page.</p>
+  </section>
+</body>
+</html>
