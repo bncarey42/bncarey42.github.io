@@ -4,9 +4,8 @@
   --orange: #FF6A5A;
   --yellow:#FFB350;
   --green:#83B8AA;
-
   --light-text-color: #F5F5d0;
-  --accent-color: var;
+
   --bold-font: "Roboto Condensed", sans-serif;
   --content-font: 'Lato', sans-serif;
 }
@@ -17,7 +16,7 @@ body{
   	font-family: var(--content-font);
 }
 a{
-  color: var(--accent-color);
+  color: var(--red);
   text-decoration: none;
 }
 /*HEADER*/
@@ -30,7 +29,7 @@ header{
 }
 header nav #active{
   font-weight: bold;
-	border-bottom-color: var(--accent-color);
+	border-bottom-color: var(--red);
 	border-bottom-width: .24px;
 	border-bottom-style: solid;
 }
@@ -38,10 +37,10 @@ header a{
   color: var(--light-text-color);
   font-family: var(--bold-font);
 	text-decoration: none;
-	color: var(--accent-color);
+	color: var(--red);
 }
 header nav a:hover{
-	color: var(--light-text-color);
+	color: var(--green);
   font-weight: bold;
 }
 header nav li{
@@ -73,7 +72,7 @@ header #motto{
   margin: auto;
 }
 section h3{
-  color: var(--accent-color);
+  color: var(--red);
   font-family: var(--bold-font);
 }
 section p{
@@ -88,7 +87,7 @@ section p{
 }
 .Contact a{
   text-decoration: underline;
-  text-decoration-color: var(--accent-color);
+  text-decoration-color: var(--red);
 }
 .wrapper h4{
   margin-bottom: 1px;
