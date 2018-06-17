@@ -1,13 +1,18 @@
 :root{
-  --bg-color: #000013;
+  --black: #272D4D;
+  --red: #B83564;
+  --orange: #FF6A5A;
+  --yellow:#FFB350;
+  --green:#83B8AA;
+
   --light-text-color: #F5F5d0;
-  --accent-color: #ef5532;
+  --accent-color: var;
   --bold-font: "Roboto Condensed", sans-serif;
   --content-font: 'Lato', sans-serif;
 }
 
 body{
-  background-color: var(--bg-color);
+  background-color: var(--black);
   color: var(--light-color);
   	font-family: var(--content-font);
 }
