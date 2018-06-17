@@ -84,9 +84,12 @@ button:hover{
 #emailForm {
     margin:auto;
     margin-bottom: 2em;
-    width: 50%;
+    width: 60%;
     text-align: center;
     color: var(--bg-color);
+}
+#emailForm h3{
+  text-align: left;
 }
 #emailForm .twelve.columns{
   text-align: center;
