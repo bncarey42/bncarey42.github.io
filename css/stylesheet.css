@@ -16,6 +16,7 @@ h3 {
 }
 h4 {
   color: var(--accent-3);
+  margin-right: 0;
 }
 a{
   color: var(--accent-2);
@@ -25,10 +26,11 @@ a:hover{
 	color: var(--accent-3);
 }
 nav{
+  margin-top: 1em;
+  margin-bottom: 1em;
   text-align: center;
   vertical-align: middle;
   height: 10%;
-  background-color: var(--accent-3);
 }
 nav #active{
   color: var(--accent-1);
@@ -55,5 +57,5 @@ nav li{
 }
 
 .resume-block .triangle {
-  
+
 }
