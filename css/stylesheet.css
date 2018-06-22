@@ -11,6 +11,9 @@ body{
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+h1 {
+  color: var(--accent-1);
+}
 h3 {
   color: var(--accent-1);
 }
@@ -91,4 +94,8 @@ button:hover{
 }
 #emailForm .twelve.columns.submit{
   text-align: right;
+}
+
+.broke {
+  margin-top: 7em;
 }

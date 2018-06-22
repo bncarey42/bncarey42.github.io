@@ -23,3 +23,8 @@ function toggle_splash_text(){
     document.getElementById("splash_msg").style.display = "block";
   }
 }
+
+function coming_soon(){
+  document.getElementById('emailForm').style.display = "none";
+  document.getElementById('coming_soon').style.display = "block";
+}
