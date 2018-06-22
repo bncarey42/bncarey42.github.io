@@ -1,97 +1,115 @@
 <!DOCTYPE html>
-<html>
-<meta charset="utf-8">
-  <title> Ben Carey | Resume </title>
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Lato' rel='stylesheet' type='text/css'>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+  <title>Ben Carey | HOME</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+  <!-- JS -->
+  <script type="text/javascript" src="js/scripts.js"></script>
+
+  <!-- Favicon -->
+  <!-- "code" by Aneeque Ahmed from the Noun Project -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
- 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="https://github.com/bncarey42" target="_blank">work</a></li>
-        <li><a href="resume.html" id="active">resum&Eacute;</a></li>
-        <li><a href="contact.html">contact</a></li>
-      </ul>
-    </nav>
-    <div class="logo">
-      <h1>Ben Carey</h1>
-      <h3 id="motto">
-        <a href="http://bncarey42.github.io">Live. Learn. Repeat.</a>
-      </h3>
-    </div>
-  </header>
-  <section class="wrapper">
-            <div class="skills">
-      <h3>Skills</h3>
-      <ul  class="noneList">
-        <li>Experience using Programming Languages: Java, C, Python, PHP, SQL(MySQL), C++</li>
-	<li>Experience using Web Technologies: J2EE, JSP, JSF, HTML, and CSS</li>
-        <li>Experience developing for embedded processors</li>
-        <li>Development experience in Linux, Windows, and OSX</li>
-        <li>Training and experience in Adobe Photoshop and GIMP image editing software</li>
-        <li>Experience using Adobe InDesign and Adobe Captivate for creating training and presentation resources</li>
-      </ul>
-    </div>
-    <div class="relExperience">
-      <h3>Relevant  Experience</h3>
-      <ul>
-	<li class="unblock">
-          <h4>Application Developer</br>
+  <!-- Primary Page Layout -->
+  <div class="container">
+    <div class="row">
+      <nav>
+        <div class="offset-by-one-third columns">
+          <ul><h4>
+            <li><a href="index.html">home</a></li>
+            <li><a href="resume.html" id="active">resum&Eacute;</a></li>
+            <li><a href="https://github.com/bncarey42" target="_blank">work</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </h4></ul>
+        </div> <!-- column -->
+      </nav>
+    </div> <!-- row -->
+    <!--CONTENT STARTS HERE -->
+    <div class="row">
+      <div class="twelve columns">
+        <span class="resume-block" style="display: inline;" onclick="toggle_resume_text('skills')">
+          <table><tr>
+            <td><h3>Skills</h3></td>
+            <td id="arrow-skills"><span class="right_arrow">▶</span><span class="down_arrow" style="display:none">▼</span></td>
+          </tr></table>
+        </span>
+      <div id="skills" style="display: none;">
+        <ul>
+          <li>Experience using Programming Languages: Java, C, Python, PHP, SQL(MySQL), C++, JavaScript</li>
+  	      <li>Experience using Framworks: Spring Batch, J2EE, JSP, JSF</li>
+          <li>Experience developing for embedded processors</li>
+          <li>Development experience in Linux, Windows, and OSX</li>
+          <li>Training and experience in Adobe Photoshop and GIMP image editing software</li>
+          <li>Experience using Adobe InDesign and Adobe Captivate for creating training and presentation resources</li>
+        </ul>
+      </div>
+      <span class="resume-block" onclick=toggle_resume_text("relevant-experience")>
+        <table><tr>
+          <td><h3>Relevant Experience</h3></td>
+          <td id="arrow-relevant-experience"><span class="right_arrow">▶</span><span class="down_arrow" style="display:none">▼</span></td>
+        </tr></table>
+      </span>
+      <div id="relevant-experience" style="display: none;">
+	       <h4>Application Developer</br>
             Securian Financial: June 2017 - Present</h4>
-	  <ul>
+	        <ul>
             <li>Design and build systems in support of the companies Annuities product line and systems</li>
           </ul>
-        <li class="unblock">
-          <h4>Advanced Repair Agent</br>
+         <h4>Advanced Repair Agent</br>
             Best Buy - Geek Squad: October 2016 - June 2017</h4>
-          <ul >
+          <ul>
             <li>Following company standards performed computer repairs ranging
-              from simple hardware installation to virus removals and operating system repair</li>
-              <li>Managed client personal data, transfering or backing up requested photos, documents, music, and videos between or to client devices</li>
+              from simple hardware installation to virus removals and operating system repair on Windows and OSX devices</li>
+            <li>Managed client personal data, transfering or backing up requested photos, documents, music, and videos between or to client devices</li>
             <li>Performed initial diagnostic of devices, restoring of returned devices and setting up
               new devices per client specifications</li>
             <li>Addressed client de-escalation and expectations when clients were
                not satisfied or did not understand the work performed</li>
           </ul>
-        </li>
-        <li class="unblock">
           <h4>Technical Education Agent</br>
             Best Buy - Geek Squad: September 2015 - November 2016</h4>
-          <ul >
+          <ul>
             <li>Provided clients with solutions to technical problems and
               questions and provided group and one on one trainings in using
               a number of devices</li>
-            <li>
-              Educated and provided clients with product solutions to technical
+            <li>Educated and provided clients with product solutions to technical
                needs in the areas of the Internet of Things and in home
               and small business networking
             </li>
-            <li>
-                Coached sales associates in how to offer a full solution to
+            <li>Coached sales associates in how to offer a full solution to
                 clients needs when purchasing new technologies
             </li>
           </ul>
-        </li>
-        <li class="unblock">
           <h4>Volunteer Specialist</br>
             Girl Scouts of Minnesota Wisconsin Lakes & Pines: November 2014 - September 2015
           </h4>
-          <ul >
+          <ul>
             <li>Oversaw the training and retention of 800+ volunteers across central Minnesota</li>
             <li>Designed and delivered new troop leaders training</li>
             <li>Developed new online training systems</li>
             <li>Built new tracking methods to ensure volunteers were current on all required trainings and paperwork</li>
             <li>Oversaw mediation of conflict between volunteers</li>
           </ul>
-        </li>
-        <li class="unblock">
-          <h4>Volunteer Coordinator</br>
+        <h4>Volunteer Coordinator</br>
             Saint James Food Pantry: July 2013 - March 2014</h4>
-          <ul >
+          <ul>
             <li>Recruited, trained, and coordinated the daily activities of a weekly average of 60 volunteers in a
             food pantry in addition to larger weekend events averaging around 75 volunteers at each event</li>
             <li>Organized volunteer records and developed new methods of organizing and accessing volunteer data</li>
@@ -100,23 +118,22 @@
             <li>Manage the upkeep of the pantry social media pages including Facebook and YouTube. Wrote
             articles and designed advertisements for the weekly publication</li>
           </ul>
-        </li>
-        <li class="unblock">
-          <h4> Fine Arts Programming Technical Assistant</br>
+        <h4> Fine Arts Programming Technical Assistant</br>
             College of Saint Benedict and Saint John’s University: August 2009 - December 2012</h4>
-          <ul >
+          <ul>
             <li>Constructed stage sets and props for theater and fine art performances</li>
             <li>Managed performers and technical backstage staff during live performances and events as stage manager</li>
             <li>Facilitated Sound and light board programming and operation</li>
           </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="itWork">
-      <h3>Major Projects</h3>
-      <ul>
-        <li class="unblock">
-          <h4>Marvin the Robot</br>
+      </div>
+      <span class="resume-block" onclick=toggle_resume_text("major-projects")>
+        <table><tr>
+          <td><h3>Major Personal Projects</h3></td>
+          <td id="arrow-major-projects"><span class="right_arrow">▶</span><span class="down_arrow" style="display:none">▼</span></td>
+        </tr></table>
+      </span>
+      <div id="major-projects" style="display: none;">
+        <h4>Marvin the Robot</br>
             Saint Paul College - Fall 2015</h4>
             <p>Implemented C/C++ algorithms on an embedded processor to read input
               from a number of external sensors on a robot dubbed 'Marvin'. Input
@@ -124,133 +141,121 @@
               beneath the robot as it moves around a board. View Marvin in action at:
               <a href="https://youtu.be/sy8xRlEwfgg" target="_blank">https://youtu.be/sy8xRlEwfgg</a>
             </p>
-        </li>
-      </ul>
-    </div>
-    <br />
-    <div class="otherExperience">
-      <h3>Other Experience</h3>
-      <ul>
-        <li class="unblock">
-          <h4>Barista </br>
-            Starbucks Coffee Company: March 2014 - November 2014</h4>
-          <ul>
-            <li>Prepared and served coffee and tea based drinks as well as food products according to company
-            practices and standards</li>
-            <li>Ensure that products met customer' and company standards. Performed daily cleaning duties</li>
-          </ul>
-        </li>
-        <li class="unblock">
-          <h4>Summer Totus Tuus Teacher</br>
-            Diocese of Sioux City: May 2012 - July 2012</h4>
-          <ul >
-            <li>Led youth in grades 1-12 in classes and activities centered in Catholic theology while traveling
-            from parish to parish throughout northwestern Iowa</li>
-            <li>Prepared and taught lessons to different age groups of children and adolescents</li>
-            <li>Facilitated youth planned and lead Liturgy</li>
-            <li>Accompanied and led student musicians and congregation at daily student Masses</li>
-            <li>Wrote and performed various skits and songs to teach students and garner their attention</li>
-          </ul>
-        </li>
-        <li class="unblock">
-          <h4>Undergraduate Pastoral Ministry Intern</br>
-            Saint Peter and Saint Paul' s Catholic Churches: January 2013 - May 2013</h4>
-            <ul >
-              <li>Planned and led classes for youth in grades 2-12</li>
-              <li>Planned and led liturgies and retreats. Directed youth and children' s choirs</li>
-              <li>Recruited youth and adult volunteers. Promoted upcoming events and programs</li>
-              <li>Oversaw the process of establishing a more active youth ministry program</li>
+      </div>
+      <span class="resume-block" onclick=toggle_resume_text("other-experience")>
+        <table><tr>
+          <td><h3>Other Experience</h3></td>
+          <td id="arrow-other-experience"><span class="right_arrow">▶</span><span class="down_arrow" style="display:none">▼</span></td>
+        </tr></table>
+      </span>
+      <div id="other-experience" style="display: none;">
+        <h4>Barista </br>
+              Starbucks Coffee Company: March 2014 - November 2014</h4>
+            <ul>
+              <li>Prepared and served coffee and tea based drinks as well as food products according to company
+              practices and standards</li>
+              <li>Ensure that products met customer' and company standards. Performed daily cleaning duties</li>
             </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="education">
-      <h3>Education</h3>
-      <ul >
-        <li class="unblock">
-          <span>
-            <h4>Saint Paul College - Saint Paul, Minnesota</h4>
-          </span>
-          <h4>Associates of Applied Science: Computer Programming</h4>
-          <p>Currently Enrolled - Estimated Graduation: May 2019</p>
-          <p>GPA: 3.77 / Honors: Dean's List</p>
-        </li>
-        <li class="unblock">
-          <span>
-            <h4>Saint John's University - Collegeville, Minnesota</h4>
-          </span>
-          <h4>Bachelor of Arts: Theology with a focus in Pastoral Ministry</h4>
-          <p>Graduated:May 2013</br>
-            Minor: Music</br>
-            Additional Activities: Men's Chorus, Opera Workshop, KJNB Campus Radio
-          </p>
-        </li>
-      </ul>
-    </div>
-    <div class="courses">
-      <h3>Courses in Computer Science and Programming</h3>
-      <ul>
-        <h4>Saint Paul College - Fall 2015</h4>
-        <ul>
-          <li>CSCI 1410 Computer Science and Information Systems</li>
-          <li>CSCI 1450 Web Fundamentals and HTML</li>
-        </ul>
-        <h4>Saint Paul College - Spring 2016</h4>
-        <ul>
-          <li>CSCI 1523 Intro to Computing and Programming Concepts</li>
-          <li>CSCI 1533 ANSI C Language Programming</li>
-          <li>CSCI 1541 Java Programming 1</li>
-        </ul>
-        <h4>Saint Paul College - Fall 2016</h4>
-        <ul>
-          <li>CSCI 1542 Java Programming 2</li>
-          <li>CSCI 1550 Database Management Fundamentals</li>
-          <li>CSCI 2466 J2EE-JSP & Servlets</li>
-        </ul>
-		<h4>Saint Paul College - Spring 2017 - <i>Current Semester</i></h4>
-        <ul>
-          <li>CSCI 1423 Computer Networking 1 (Linux and Windows 7)</li>
-          <li>CSCI 1524 Introduction to Algorithms and Data Structures</li>
-          <li>CSCI 2570 Machine Architecture and Organization</li>
-        </ul>
-      </ul>
-    </div>
-    <div class="volunteer">
-      <h3>Volunteer Experience</h3>
-      <ul >
-        <li class="unblock">
+          <h4>Summer Totus Tuus Teacher</br>
+              Diocese of Sioux City: May 2012 - July 2012</h4>
+            <ul>
+              <li>Led youth in grades 1-12 in classes and activities centered in Catholic theology while traveling
+              from parish to parish throughout northwestern Iowa</li>
+              <li>Prepared and taught lessons to different age groups of children and adolescents</li>
+              <li>Facilitated youth planned and lead Liturgy</li>
+              <li>Accompanied and led student musicians and congregation at daily student Masses</li>
+              <li>Wrote and performed various skits and songs to teach students and garner their attention</li>
+            </ul>
+          <h4>Undergraduate Pastoral Ministry Intern</br>
+              Saint Peter and Saint Paul' s Catholic Churches: January 2013 - May 2013</h4>
+              <ul>
+                <li>Planned and led classes for youth in grades 2-12</li>
+                <li>Planned and led liturgies and retreats. Directed youth and children' s choirs</li>
+                <li>Recruited youth and adult volunteers. Promoted upcoming events and programs</li>
+                <li>Oversaw the process of establishing a more active youth ministry program</li>
+              </ul>
+      </div>
+      <span class="resume-block" onclick=toggle_resume_text("education")>
+        <table><tr>
+          <td><h3>Education</h3></td>
+          <td id="arrow-education"><span class="right_arrow">▶</span><span class="down_arrow" style="display:none">▼</span></td>
+        </tr></table>
+      </span>
+      <div id="education" style="display: none;">
+        <h4>Saint Paul College - Saint Paul, Minnesota<br/>
+          Associates of Applied Science: Computer Programming</h4>
+            <p>Currently Enrolled - Estimated Graduation: May 2018</p>
+            <p>GPA: 3.77 / Honors: Dean's List</p>
+        <h4>Saint John's University - Collegeville, Minnesota<br/>
+          Bachelor of Arts: Theology with a focus in Pastoral Ministry</h4>
+            <p>Graduated:May 2013</br>
+              Minor: Music</br>
+              Additional Activities: Men's Chorus, Opera Workshop, KJNB Campus Radio
+            </p>
+        <h4>Courses in Computer Science and Programming</h4>
+          <h5>Saint Paul College - Fall 2015</h5>
+          <ul>
+            <li>CSCI 1410 Computer Science and Information Systems</li>
+            <li>CSCI 1450 Web Fundamentals and HTML</li>
+          </ul>
+          <h5>Saint Paul College - Spring 2016</h5>
+          <ul>
+            <li>CSCI 1523 Intro to Computing and Programming Concepts</li>
+            <li>CSCI 1533 ANSI C Language Programming</li>
+            <li>CSCI 1541 Java Programming 1</li>
+          </ul>
+          <h5>Saint Paul College - Fall 2016</h5>
+          <ul>
+            <li>CSCI 1542 Java Programming 2</li>
+            <li>CSCI 1550 Database Management Fundamentals</li>
+            <li>CSCI 2466 J2EE-JSP & Servlets</li>
+          </ul>
+  		    <h5>Saint Paul College - Spring 2017</h5>
+          <ul>
+            <li>CSCI 1423 Computer Networking 1 (Linux and Windows 7)</li>
+            <li>CSCI 1524 Introduction to Algorithms and Data Structures</li>
+            <li>CSCI 2570 Machine Architecture and Organization</li>
+          </ul>
+          <h5>Saint Paul College - Fall 2018</h5>
+          <ul>
+            <li>CSCI 2442 Server Side Programming (PHP + SQL)</li>
+          </ul>
+      </div>
+      <span class="resume-block" onclick=toggle_resume_text("volunteer-experience")>
+        <table><tr>
+          <td><h3>Volunteer Experience</h3></td>
+          <td id="arrow-volunteer-experience"><span class="right_arrow">▶</span><span class="down_arrow" style="display:none">▼</span></td>
+        </tr></table>
+      </span>
+      <div id="volunteer-experience" style="display: none;">
           <h4>Saint John's Abbey Benedictine Volunteer Corps: May 2013 - March 2014</h4>
           <p>In conjunction with the responsibilities as acting as Volunteer Coordinator at St. James Food
           Pantry, lived in community with other recent graduates and religious from St. Meinrad Abbey, met
           daily for prayer and meals, and assisted with periodic duties in the St. James Catholic Church
           community</p>
-        </li>
-        <!-- <li class="unblock">
-          <h4>Saint Joseph Parish Middle School Youth Ministry: October 2011 - April 2012</h4>
+        <!-- <h4>Saint Joseph Parish Middle School Youth Ministry: October 2011 - April 2012</h4>
           <p>As a member of a group of volunteers, helped plan and lead monthly youth ministry nights for
           youth grades 6-8. Gave witness talks and taught lessons in addition to leading team and community
-          building activities</p>
-        </li> -->
-      </ul>
-    </div>
-    <div class="leadership">
-      <h3>Leadership and Honors</h3>
-      <ul >
-        <li class="unblock">
-          <h4>Saint John's Men's Chorus - Choir President: May 2012 - May 2013</h4>
+          building activities</p> -->
+      </div>
+      <span class="resume-block" onclick=toggle_resume_text("leadership")>
+        <table><tr>
+          <td><h3>Leadership and Honors</h3></td>
+          <td id="arrow-leadership"><span class="right_arrow">▶</span><span class="down_arrow" style="display:none">▼</span></td>
+        </tr></table>
+      </span>
+      <div id="leadership" style="display: none;">
+          <h4>Saint John's Men's Chorus: Choir President: May 2012 - May 2013</h4>
           <p>As the elected officer of the chorus, duties included organizing chorus members before performances,
             acting as liaison between director and students, leading or finding leadership for practice when the
             director was unable to attend, and addressing problems among chorus members.</p>
-        </li>
-        <li class="unblock">
-          <h4>Boy Scouts of America - Eagle Scout: 2008</h4>
+          <h4>Boy Scouts of America: Eagle Scout - 2008</h4>
           <p>Designed and led fellow scouts and volunteers in construction and planting of a sustainable
             "Hunger Garden" the produce from which was delivered to food shelters, pantries, Catholic
             Worker Houses, and other affiliates of Catholic Charities in the Des Moines metropolitan area.</p>
-        </li>
-      </ul>
-      </ul>
-    </div>
-  </section>
+      </div>
+    </div><!-- column -->
+  </div> <!-- row -->
+  </div> <!-- container -->
 </body>
 </html>
