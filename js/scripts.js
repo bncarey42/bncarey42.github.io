@@ -1,10 +1,16 @@
 function toggle_resume_text(id){
-  if(document.getElementById(id).style.display == "none"){
-     document.getElementById(id).style.display = "block"
-     document.getElementById("arrow-" + id).innerHTML = "▼";
+  var elm = document.getElementById(id);
+  var arrow_right = document.getElementById('arrow-' + id).querySelectorAll(".right_arrow")[0];
+  var arrow_down = document.getElementById('arrow-' + id).querySelectorAll(".down_arrow")[0];
+
+  if(elm.style.display == "none"){
+    elm.style.display = "block";
+    arrow_right.style.display = "none";
+    arrow_down.style.display = "block";
   } else {
-    document.getElementById(id).style.display = "none";
-     document.getElementById("arrow-" + id).innerHtml = "▶";
+    elm.style.display = "none"
+    arrow_right.style.display = "block";
+    arrow_down.style.display = "none";
   }
 }
 
