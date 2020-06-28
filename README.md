@@ -1,4 +1,4 @@
 # Personal Website
-A simple website
+A simple resume website
 
 [Check it out here](https://bncarey42.github.io)

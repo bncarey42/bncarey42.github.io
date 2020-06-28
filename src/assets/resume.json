@@ -1,0 +1,26 @@
+{
+  "work": [
+    {
+      "title": "Developer Senior Associate I",
+      "startDate": "July 2019",
+      "endDate": null,
+      "bullets": [
+        "Contractor Developer, Proveded clients technical solutions related to software development and data management",
+        {
+          "company" : "3M",
+          "title": "Developer II",
+          "startDate": "July 2019",
+          "endDate": null,
+          "bullets": [
+            "",
+            ""
+          ]
+        }
+      ],
+      "techUsed": [
+        "",
+        ""
+      ]
+    }
+  ]
+}
