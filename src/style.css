@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+h1 {
+    @apply text-5xl mb-5 font-semibold;
+}
+
+h2 {
+    @apply text-4xl mb-4 font-semibold;
+}
+
+h3 {
+    @apply text-3xl mb-3 font-medium;
+}
+
+h4 {
+    @apply text-xl mb-3 font-medium;
+}
+
+h5 {
+    @apply text-lg mb-3 font-medium;
+}
+
+.pill-scroll::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.pill-scroll::-webkit-scrollbar-track {
+    background: none;
+}
+
+.pill-scroll::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.75);
+    border-radius: 15px;
+}
+
+.pill-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 15px;
+}
+
+.pill-scroll::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 15px;
+}
+
+.pill-scroll::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.pill-scroll::-webkit-scrollbar-track {
+    background: none;
+}
+
+.pill-scroll::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.75);
+    border-radius: 15px;
+}
+
+.pill-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 15px;
+}
+
+.pill-scroll::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 15px;
+}
