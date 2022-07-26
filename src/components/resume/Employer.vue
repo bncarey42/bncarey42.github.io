@@ -1,7 +1,7 @@
 <template>
-  <card class="grid grid-cols-4 gap-3 my-3">
+  <card class="grid grid-cols-1 md:grid-cols-4 gap-3 my-3">
     <div class="">
-      <div class="grid grid-cols-4 gap-3 sticky top-3">
+      <div class="grid grid-cols-3 gap-2 sticky top-3">
         <div class=" ">
           <div v-if="employer.icon" class="w-20 h-20">
             <div v-html="employer.icon" v-if="employer?.icon.match(/<svg .*><\/svg>/)"></div>
@@ -11,7 +11,7 @@
             <div class="rounded-full w-20 h-20 bg-accent-1 default-icon"></div>
           </div>
         </div>
-        <div class="col-span-3">
+        <div class="col-span-2">
           <h3>{{ employer.employer }}</h3>
           <p class="font-semibold text-tertiary"> {{ employer.startDate }} - {{ employer.endDate }}</p>
         </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="" v-if="loading">LOADING</div>
   <div class="" v-else>
-    <employer :employer="emp" v-for="(emp, key) in work" :key="key"/>
+    <employer :employer="emp" v-for="(emp, key) in work" :key="key" class="mb-5"/>
   </div>
 </template>
 
