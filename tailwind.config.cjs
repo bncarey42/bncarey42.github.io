@@ -22,7 +22,9 @@ module.exports = {
       danger: '#8e3b3b'
     },
     extend: {
-
+      fontFamily: {
+        'lato': ['"Ubuntu"', 'sans']
+      }
     },
   },
   plugins: [],

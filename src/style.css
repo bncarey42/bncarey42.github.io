@@ -1,24 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 h1 {
-    @apply text-5xl mb-5 font-semibold;
+    @apply text-5xl mb-5 font-semibold text-accent-1;
 }
 
 h2 {
-    @apply text-4xl mb-4 font-semibold;
+    @apply text-4xl mb-4 font-semibold text-accent-1;
 }
 
 h3 {
-    @apply text-3xl mb-3 font-medium;
+    @apply text-3xl mb-3 font-medium text-accent-1;
 }
 
 h4 {
-    @apply text-xl mb-3 font-medium;
+    @apply text-xl mb-3 font-medium text-accent-1;
 }
 
 h5 {
-    @apply text-lg mb-3 font-medium;
+    @apply text-lg mb-3 font-medium text-accent-1;
 }
 
 .pill-scroll::-webkit-scrollbar {
