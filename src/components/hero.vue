@@ -1,13 +1,12 @@
 <script setup>
-import Btn from "./base/Bnt.vue";
-
 defineProps({
   title: {type: String, required: false},
   msg: {type: String, required: true},
   imgUrl: {type: String, required: false},
   imgAlt: {type: String, required: false},
   callToAction: {type: Function, required: false},
-  callToActionMsg: {type: String, required: false}
+  callToActionMsg: {type: String, required: false},
+  links: {type: String, required: false}
 })
 </script>
 
@@ -27,10 +26,10 @@ defineProps({
           </div>
           <div class="flex justify-center lg:justify-end gap-3 items-center text-xl">
             <p>Contact me at:</p>
-            <a v-for="(site,key) in links" :key="key"
+            <a v-for="(site, key) in links" :key="key"
                :href="site.link" target="_blank"
-               :class="{'cursor-pointer':site.link }">
-              <i :class="site.icon"/>
+               :class="{'cursor-pointer':site.link , '':true}">
+              <i :class="site.icon" :title="site.title"/>
             </a>
           </div>
         </div>
