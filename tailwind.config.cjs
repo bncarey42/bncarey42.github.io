@@ -23,7 +23,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'lato': ['"Ubuntu"', 'sans']
+        'ubuntu': ['"Ubuntu"', 'sans']
       }
     },
   },
