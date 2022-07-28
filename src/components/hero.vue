@@ -7,7 +7,8 @@ defineProps({
   imgUrl: {type: String, required: false},
   imgAlt: {type: String, required: false},
   callToAction: {type: Function, required: false},
-  callToActionMsg: {type: String, required: false}
+  callToActionMsg: {type: String, required: false},
+  links: {type: Array, required: false}
 })
 </script>
 
@@ -20,14 +21,19 @@ defineProps({
              alt="Profile Avatar for Ben Carey">
       </div>
       <div class="">
-        <div class="w-full p-3 shadow-lg rounded-lg bg-white bg-opacity-70">
-          <h1>Hi! I'm Ben.</h1>
+        <div class="w-full p-3 shadow-lg rounded-lg bg-white bg-opacity-80">
+          <h1>{{title}}</h1>
           <div class="px-3">
             <p>{{ msg }}</p>
           </div>
-<!--          <div class="flex justify-end gap-3">-->
-<!--            <button @click="callToAction()">{{ callToActionMsg }}</button>-->
-<!--          </div>-->
+          <div class="flex justify-end gap-3 items-center text-xl">
+            <p>Contact me at:</p>
+            <a v-for="(site,key) in links" :key="key"
+               :href="site.link" target="_blank"
+               :class="{'flex justify-start items-start gap-1':true, 'cursor-pointer':site.link }">
+              <i :class="site.icon"/>
+            </a>
+          </div>
         </div>
       </div>
     </div>

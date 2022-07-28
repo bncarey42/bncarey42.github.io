@@ -13,9 +13,10 @@ import Hero from "./components/hero.vue";
         <div class="bg-accent-1 bg-hex h-full rounded-2xl bg-repeat-y lg:mx-10 mx-4 bg-accent-1 relative"></div>
       </div>
       <div class="">
-        <hero msg="I am a systems minded developer with a client focused mindset. I am always questioning and curious
+        <hero title="Hi! I'm Ben." msg="I am a systems minded developer with a client focused mindset. I am always questioning and curious
               with a focus on how big problems can be simplified in order to implement effective, maintainable solutions.
               I am lifelong student who is always looking to expand my understanding of fundamental and complex ideas."
+              :links="sites"
         />
         <card class="flex justify-center" v-if="loading">
           <h5>LOADING</h5>
@@ -32,6 +33,18 @@ export default {
   data() {
     return {
       resume: {work: []},
+      sites: [
+        {
+          icon: "uil uil-github",
+          title: "github.com/bncarey42",
+          link: "https://github.com/bncarey42",
+        },
+        {
+          icon: "uil uil-linkedin",
+          title: "linkedin.com/in/benjamintcarey",
+          link: "https://www.linkedin.com/in/benjamintcarey/",
+        },
+      ],
       loading: true
     }
   },
