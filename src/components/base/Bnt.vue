@@ -3,7 +3,7 @@
           v-on="$emit"
           :class="[
               'cursor-pointer px-3 py-2 rounded-full flex items-center justify-center font-semibold hover:border-opacity-80 hover:bg-opacity-80 disabled:border-opacity-30 disabled:bg-opacity-30',
-              outline ? outlined : notOutlined
+              outline ? `bg-white border-2 border-${color ? color : 'tertiary'} text-${color ? color : 'tertiary'}` : `bg-${color ? color : 'tertiary'} text-white`
           ]">
     <slot>
       {{ text }}
@@ -34,14 +34,6 @@ export default {
       type: Boolean,
       default: false,
       required: false
-    }
-  },
-  computed: {
-    outlined () {
-      return `bg-white border-2 border-${this.color ? this.color : 'tertiary'} text-${this.color ? this.color : 'tertiary'}`
-    },
-    notOutlined() {
-      return `bg-${this.color ? this.color : 'tertiary'} text-white`
     }
   }
 }

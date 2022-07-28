@@ -12,9 +12,6 @@ export default {
       default: false
     }
   },
-  mounted() {
-    console.log(this.role)
-  }
 }
 </script>
 
@@ -22,23 +19,19 @@ export default {
   <div class="mb-3">
     <div class="mb-3">
       <h3>{{ role.title }}</h3>
-      <p class="font-semibold text-tertiary"> {{ role.startDate }} - {{ role.endDate }}</p>
+      <p class="font-semibold text-primary"> {{ role.startDate }} - {{ role.endDate }}</p>
       <p><span class="font-semibold mr-1" v-if="role.description">{{
           `${project ? "Project" : "Role"} Description:`
         }}</span>{{ role.description }}</p>
     </div>
     <div v-if="role.technologies?.length" class="mb-3">
       <h4>Technologies:</h4>
-      <div class="mx-auto">
-        <ul class="">
-          <li class="inline-grid mr-3 text-center" v-for="(tech, key) in role.technologies" :key="key">
-            <div>
-              <i :class="tech.icon" class="w-20 mr-3 last:mr-0"/>
-              <p>{{ tech.title }}</p>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <ul class="inline-grid grid-cols-3 lg:grid-cols-8 gap-3 w-full">
+        <li class="text-center" v-for="(tech, key) in role.technologies" :key="key">
+          <i :class="tech.icon" class="text-4xl"/>
+          <p>{{ tech.title }}</p>
+        </li>
+      </ul>
     </div>
     <div v-if="role.duties?.length" class="mb-3">
       <h4>Responsibilities:</h4>
