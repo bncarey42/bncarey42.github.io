@@ -35,7 +35,7 @@ defineProps({
             </a>
           </div>
         </div>
-      </div>g
+      </div>
     </div>
   </div>
 </template>
