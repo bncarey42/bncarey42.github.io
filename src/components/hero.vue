@@ -7,8 +7,7 @@ defineProps({
   imgUrl: {type: String, required: false},
   imgAlt: {type: String, required: false},
   callToAction: {type: Function, required: false},
-  callToActionMsg: {type: String, required: false},
-  links: {type: Array, required: false}
+  callToActionMsg: {type: String, required: false}
 })
 </script>
 
@@ -26,11 +25,11 @@ defineProps({
           <div class="px-3">
             <p>{{ msg }}</p>
           </div>
-          <div class="flex justify-end gap-3 items-center text-xl">
+          <div class="flex justify-center lg:justify-end gap-3 items-center text-xl">
             <p>Contact me at:</p>
             <a v-for="(site,key) in links" :key="key"
                :href="site.link" target="_blank"
-               :class="{'flex justify-start items-start gap-1':true, 'cursor-pointer':site.link }">
+               :class="{'cursor-pointer':site.link }">
               <i :class="site.icon"/>
             </a>
           </div>
