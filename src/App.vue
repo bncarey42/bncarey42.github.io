@@ -13,9 +13,9 @@ import Hero from "./components/hero.vue";
         <div class="bg-accent-1 bg-hex h-full rounded-2xl bg-repeat-y lg:mx-10 mx-4 bg-accent-1 relative"></div>
       </div>
       <div class="">
-        <hero title="Hi! I'm Ben." msg="I am a systems minded developer with a client focused mindset. I am always questioning and curious
+        <hero title="Hi! I'm Ben." :msg="`I am a systems minded software engineer with a client focused mindset with ${new Date().getFullYear() - 2017} years of development and engineering experience. I am always questioning and curious
               with a focus on how big problems can be simplified in order to implement effective, maintainable solutions.
-              I am lifelong student who is always looking to expand my understanding of fundamental and complex ideas."
+              I am lifelong student who is always looking to expand my understanding of fundamental and complex ideas.`"
               :links="sites"
         />
         <card class="flex justify-center" v-if="loading">
