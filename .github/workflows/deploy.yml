@@ -14,14 +14,12 @@ jobs:
             ref: main
             fetch-depth: 0
        - name: install
-         run: npm install
+         run: |
+            npm install
+            "[user]"$'\n\t'"name = [bot]github-actions"$'\n\t'"email = <>" >> .git/config
          
        - name: deploy
          run: |
-            git --version
-            git config init.defaultBranch main
-            git config user.name "GitHub Actions Bot"
-            git config user.email "<>"
             echo Deploying to GitHub Pages
             sh ./lib/deploy.sh
          
