@@ -16,5 +16,6 @@ rm -rfv .git
 git init
 git add -A
 git commit -am 'New GHP Deploy'
-git push -f $GITHUB_REPO $GITHUB_BRANCH --no-verify
+git remote add origin $GITHUB_REPO
+git push -fu origin $GITHUB_BRANCH --no-verify
 cd -
