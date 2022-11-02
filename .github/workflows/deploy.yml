@@ -19,7 +19,8 @@ jobs:
                      
        - name: deploy
          run: |
-            echo "[user]"$'\n\t'"name = [bot]github-actions"$'\n\t'"email = <>" >> .git/config
+            git config --global user.email "<>"
+            git config --global user.name "bot-github-actions"
             echo Deploying to GitHub Pages
             sh ./lib/deploy.sh
          
