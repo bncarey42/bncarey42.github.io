@@ -6,8 +6,6 @@ git --version
 GITHUB_REPO=git@github.com:bncarey42/bncarey42.github.io.git
 GITHUB_BRANCH=main_gh-pages
 
-git config --get user.name
-
 npm ci
 npm run build
 cd dist
