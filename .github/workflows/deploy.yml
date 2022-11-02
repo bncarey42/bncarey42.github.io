@@ -12,6 +12,7 @@ jobs:
        - name: deploy
          run: |
             git branch -la
+            git config --get user.email
             echo Deploying to GitHub Pages
             sh ./lib/gh_pages_deploy.sh
          
