@@ -16,5 +16,5 @@ jobs:
        - name: deploy
          run: |
             echo Deploying to GitHub Pages
-            sh ./lib/deploy.sh
+            sh ./lib/gh_pages_deploy.sh
          
