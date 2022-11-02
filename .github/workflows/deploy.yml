@@ -12,6 +12,9 @@ runs:
        - name: checkout
          uses: actions/checkout@v3
 
+       - name: install
+         run: npm install
+         
        - name: deploy
          run: |
             echo Deploying to GitHub Pages
