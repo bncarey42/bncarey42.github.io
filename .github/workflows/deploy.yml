@@ -12,7 +12,6 @@ jobs:
        - name: deploy
          run: |
             git branch -la
-            ls -lFs
             echo Deploying to GitHub Pages
             sh ./lib/gh_pages_deploy.sh
          
