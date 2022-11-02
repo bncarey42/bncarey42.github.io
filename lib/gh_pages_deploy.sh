@@ -5,6 +5,10 @@ git --version
 git config --global user.name 'bncarey42'
 git config --global init.defaultBranch "main"
 
+GITHUB_REPO=git@github.com:bncarey42/bncarey42.github.io.git
+GITHUB_BRANCH=_gh-pages
+git checkout -b $GITHUB_BRANCH
+
 npm ci
 npm run build
 
