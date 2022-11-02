@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-GITHUB_REPO=git@github.com:bncarey42/bncarey42.github.io.git
+GITHUB_REPO=https://github.com/bncarey42/bncarey42.github.io.git
 GITHUB_BRANCH=main:_gh-pages
 
 npm run build
