@@ -1,6 +1,6 @@
 name: Build and Deploy to GHPages
 on:
-   push:
+   push
 jobs:
    build-deploy:
       runs-on: ubuntu-latest
