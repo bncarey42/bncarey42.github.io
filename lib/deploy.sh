@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e
 
-GITHUB_REPO=https://github.com/bncarey42/bncarey42.github.io.git
+GITHUB_REPO=git@github.com:bncarey42/bncarey42.github.io.git
 GITHUB_BRANCH=main:_gh-pages
 
 npm run build
 cd dist
-rm -rf .git
+rm -rfv .git
 git init
 git add -A
 git status
