@@ -14,5 +14,5 @@ cd dist
 git checkout $GITHUB_BRANCH
 git add -A
 git commit -m 'New GHP Deploy'
-git push -f $GITHUB_BRANCH --no-verify
+git push -f --no-verify
 cd -
