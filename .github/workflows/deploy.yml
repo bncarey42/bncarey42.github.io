@@ -8,10 +8,25 @@ jobs:
       runs-on: ubuntu-latest
       concurrency: ci-${{github.ref}}
       steps:
-       - uses: actions/checkout@v3         
-       - name: deploy
+       - uses: actions/checkout@v3    
+       
+       - name: Build project
          run: |
-            git branch -la
-            echo Deploying to GitHub Pages
-            sh ./lib/gh_pages_deploy.sh
+            npm ci
+            npm run build
+       - name: create archive
+         run: | 
+            tar \
+            --dereference --hard-dereference \
+            --directory "dist" \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            .
+
+       - name: deploy to ghp
+         uses: actions/upload-pages-artifact@v1.0.4
+         with:
+            name: github-pages
+            path: ${{ runner.temp }}/artifact.tar
          
