@@ -16,10 +16,10 @@ jobs:
        - name: install
          run: |
             npm install
-            echo "[user]"$'\n\t'"name = [bot]github-actions"$'\n\t'"email = <>" >> .git/config
-         
+                     
        - name: deploy
          run: |
+            echo "[user]"$'\n\t'"name = [bot]github-actions"$'\n\t'"email = <>" >> .git/config
             echo Deploying to GitHub Pages
             sh ./lib/deploy.sh
          
