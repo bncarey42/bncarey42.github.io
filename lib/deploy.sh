@@ -17,6 +17,6 @@ git init
 git add -A
 git commit -am 'New GHP Deploy'
 git remote add origin $GITHUB_REPO
-git checkout $GITHUB_BRANCH
+git checkout -b $GITHUB_BRANCH
 git push -f -u origin $GITHUB_BRANCH --no-verify
 cd -
