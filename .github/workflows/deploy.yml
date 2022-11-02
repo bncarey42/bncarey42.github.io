@@ -7,11 +7,11 @@ jobs:
    build-deploy:
       runs-on: ubuntu-latest
       concurrency: ci-${{github.ref}}
-      
       steps:
        - uses: actions/checkout@v3         
        - name: deploy
          run: |
+            git branch -l
             echo Deploying to GitHub Pages
             sh ./lib/gh_pages_deploy.sh
          
