@@ -19,7 +19,7 @@ jobs:
             tar \
             --dereference --hard-dereference \
             --directory "dist" \
-            -cvf "$RUNNER_TEMP/artifact.tar" \
+            -cvf "$RUNNER_TEMP/github-pages.tar" \
             --exclude=.git \
             --exclude=.github \
             .
@@ -28,5 +28,5 @@ jobs:
          uses: actions/upload-pages-artifact@v1.0.4
          with:
             name: github-pages
-            path: ${{ runner.temp }}/artifact.tar
+            path: ${{ runner.temp }}
          
