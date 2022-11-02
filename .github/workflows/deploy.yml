@@ -11,7 +11,7 @@ jobs:
        - uses: actions/checkout@v3         
        - name: deploy
          run: |
-            git branch -l
+            git branch -la
             echo Deploying to GitHub Pages
             sh ./lib/gh_pages_deploy.sh
          
