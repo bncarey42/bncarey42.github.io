@@ -3,7 +3,7 @@ set -e
 
 git --version
 
-git config user.email=$secrets.EMAIL_GITHUB
+git config user.email="$secrets.EMAIL_GITHUB"
 
 GITHUB_REPO=git@github.com:bncarey42/bncarey42.github.io.git
 GITHUB_BRANCH=main_gh-pages
