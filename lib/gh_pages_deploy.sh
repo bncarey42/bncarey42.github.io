@@ -2,7 +2,8 @@
 set -e
 
 git --version
-git config --global user.name "bncarey42"
+git config --global user.name 'github-actions[bot]'
+git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 git config --global init.defaultBranch "main"
 
 GITHUB_REPO=https://github.com/bncarey42/bncarey42.github.io.git
@@ -12,11 +13,8 @@ npm ci
 npm run build
 
 cd dist
-rm -rfv .git
-git init
 git add -A
 git commit -am 'New GHP Deploy'
-git remote add origin $GITHUB_REPO
-git checkout -b $GITHUB_BRANCH
+git checkout $GITHUB_BRANCH
 git push -f -u origin $GITHUB_BRANCH --no-verify
 cd -
