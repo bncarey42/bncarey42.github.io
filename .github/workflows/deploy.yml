@@ -13,15 +13,12 @@ jobs:
          with:
             ref: main
             fetch-depth: 0
-         run: ls -lFs
        - name: install
          run: |
             npm install
                      
        - name: deploy
          run: |
-            git config --global user.email "<>"
-            git config --global user.name "bot-github-actions"
             echo Deploying to GitHub Pages
             sh ./lib/deploy.sh
          
