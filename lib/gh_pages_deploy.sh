@@ -13,8 +13,8 @@ npm ci
 npm run build
 
 cd dist
+git checkout $GITHUB_BRANCH
 git add -A
 git commit -am 'New GHP Deploy'
-git checkout $GITHUB_BRANCH
-git push -f -u origin $GITHUB_BRANCH --no-verify
+git push -f $GITHUB_BRANCH --no-verify
 cd -
