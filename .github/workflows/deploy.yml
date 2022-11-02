@@ -3,12 +3,13 @@ on:
    push:
       branches:
          - main
-runs:
-   using: 'node16'
+jobs:
+   
    build-deploy:
       runs-on: ubuntu-latest
       concurrency: ci-${{github.ref}}
       steps:
+       - uses: 'node16'
        - name: checkout
          uses: actions/checkout@v3
 
