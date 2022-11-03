@@ -4,7 +4,7 @@ set -e
 git --version
 git config user.name 'bncarey42'
 
-GITHUB_REPO=git@github.com:bncarey42/bncarey42.github.io.git
+GITHUB_REPO=https://github.com/bncarey42/bncarey42.github.io.git
 GITHUB_BRANCH=main_gh-pages
 
 npm ci
