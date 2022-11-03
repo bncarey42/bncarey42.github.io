@@ -16,17 +16,14 @@ jobs:
        - name: git config
          run: |
             git --version
-            git config --global user.name github-actions
-            git config --global user.email github-actions@github.com
+            git config --global user.name [bot]github-actions
+            git config --global user.email bot-github-actions@github.com
             git config --global init.defaultBranch main
-            git branch -la
        - name: deploy
          run: |
-            git branch -la
             echo Deploying to GitHub Pages
             sh ./lib/gh_pages_deploy.sh
          env:
-            TMP_DIR: ${{ runner.temp }}
             GITHUB_REPO: https://x-access-token:${{ secrets.TOKEN }}@github.com/${{ github.repository }}
             GITHUB_BRANCH: main:_gh-pages
             
