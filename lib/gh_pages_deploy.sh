@@ -2,7 +2,8 @@
 set -e
 
 git --version
-git config user.name 'bncarey42'
+git config --global user.email "<>"
+git config --global user.name "[bot]-gh-action"
 
 GITHUB_REPO=https://github.com/bncarey42/bncarey42.github.io.git
 GITHUB_BRANCH=main_gh-pages
