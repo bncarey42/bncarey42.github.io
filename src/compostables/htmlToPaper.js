@@ -1,4 +1,6 @@
 function htmlToPdf(data, options) {
+    console.log('DOOOOOOOOT')
+
     let name = "_blank",
         specs = ["fullscreen=yes", "titlebar=yes", "scrollbars=yes"],
         replace = true,

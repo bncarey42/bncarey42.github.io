@@ -1,0 +1,120 @@
+:root{
+  --bg-color: #2a3a48;
+  --bg-color-trans: RGBA(42, 58, 72, .75);
+  --accent-1: #ff6900;
+  --accent-2: #3e6372;
+  --accent-3: #b2d4dc;
+  --text-color: #f5efde;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin-bottom: 3em;
+}
+h1 {
+  color: var(--accent-1);
+}
+h3 {
+  color: var(--accent-1);
+}
+h4 {
+  color: var(--accent-3);
+  margin-right: 0;
+}
+a{
+  color: var(--accent-2);
+  text-decoration: none;
+}
+a:hover{
+	color: var(--accent-3);
+  -webkit-transition-duration: 1s; /* Safari */
+  transition-duration: 1s;
+}
+
+nav{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  vertical-align: middle;
+  height: 10%;
+}
+nav #active{
+  color: var(--accent-1);
+	border-bottom-color: var(--accent-2);
+	border-bottom-width: .15em;
+	border-bottom-style: solid;
+}
+nav li{
+	display: inline;
+	text-transform: uppercase;
+}
+
+.about {
+  margin-top: 7em;
+}
+
+.resume-block table{
+  margin-bottom: 0px;
+}
+
+.resume-block td{
+  vertical-align: middle;
+  border-bottom: 0; /*get rid of bottom border*/
+  padding-top: 0;
+  padding-bottom: 0;
+  cursor: pointer; /* make look like a link use both for browser compatibility*/
+  cursor: hand; /* make look like a link use both for browser compatibility*/
+}
+
+button{
+  color: var(--text-color);
+  background-color: var(--accent-2);
+  -webkit-transition-duration: 0.75s; /* Safari */
+  transition-duration: 0.75s;
+}
+button:hover{
+  color: var(--accent-3);
+  background-color: var(--bg-color);
+}
+#emailForm {
+    margin:auto;
+    margin-bottom: 2em;
+    width: 60%;
+    text-align: center;
+    color: var(--bg-color);
+}
+#emailForm h3{
+  text-align: left;
+}
+#emailForm .twelve.columns{
+  text-align: center;
+}
+#emailForm input, textarea{
+  width: 100%;
+}
+#emailForm .twelve.columns.submit{
+  text-align: right;
+}
+
+.broke {
+  margin-top: 7em;
+}
+
+footer {
+  background-color: var(--bg-color);
+  position: fixed;
+  text-align:right;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  position: fixed;
+  z-index: 10;
+  height: 3em;
+}
+
+footer li{
+  padding: 0.5em;
+  display: inline;
+}
