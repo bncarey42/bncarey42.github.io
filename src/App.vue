@@ -3,7 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import Resume from "./components/resume/Resume.vue";
 // import htmlToPdf from "./compostables/htmlToPaper.js";
-// import Card from "./components/base/Card.vue";
+import Card from "./components/base/Card.vue";
 import Hero from "./components/hero.vue";
 </script>
 <template>
