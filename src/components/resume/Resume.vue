@@ -32,7 +32,7 @@ export default {
       filter: {
         employer: '',
         title: '',
-        technology: [{title:'AWS'}, {title: "Python"}]
+        technology: []
       }
     }
   },

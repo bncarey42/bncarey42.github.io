@@ -2,15 +2,16 @@
   <div class="relative inline-block text-left w-full">
     <div
         class="inline-flex w-full justify-center items-center rounded-md border border-secondary bg-white px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-      <div class="flex justify-start mr-1">
+      <div class="flex justify-start mr-1 my-2">
         <div v-for="(selectItem, key) in selected" :key="`select_${key}`" class="flex justify-between items-center bg-accent-2 rounded-full py-1 px-2 mr-1 text-white font-semibold">
+          <i :class="selectItem.icon" class="mr-1"/>
           <div class="mr-1">{{ selectItem[descriptor] }}</div>
           <button @click="removeSelected(selectItem)"><i class="uil uil-times"></i></button>
         </div>
       </div>
       <input type="text"
              v-model="filter_text"
-             class="border-none bg-none w-full h-full m-0 focus:outline-0"
+             class="border-none bg-none w-full h-full outline-none"
              id="menu-button"
              aria-expanded="true"
              aria-haspopup="true"
@@ -41,7 +42,7 @@
         To: "transform opacity-0 scale-95"
     -->
     <div v-if="!hide_options"
-         class="absolute right-0 z-10 mt-1 w-full max-h-64 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 overflow-x-hidden overflow-y-scroll pill-scroll focus:outline-none"
+         class="absolute shadow-xl right-0 z-10 mt-1 w-full max-h-64 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 overflow-x-hidden overflow-y-scroll pill-scroll focus:outline-none"
          role="menu"
          aria-orientation="vertical"
          aria-labelledby="menu-button"
@@ -51,11 +52,10 @@
         <div v-for="(option,key) in filtered_options" :key="`option_${key}`" role="menuitem"
              class="px-4 py-2 hover:bg-primary hover:bg-opacity-30" :tabindex="key"
              >
-          <label :for="`option_${key}`">
-            <i :class="option.icon" class="mr-2"></i>
-            <input type="checkbox" name="multiselect-checkbox" class="hidden" :id="`option_${key}`" :value="option" @click="addOption(option)">
+          <a href="javascript:void(0)" :id="`option_${key}`" :value="option" @click="selected.push(option)" class="w-full">
+            <i :class="option.icon" class="mr-2" v-if="option.icon"></i>
             {{ option[descriptor] }}
-          </label>
+          </a>
         </div>
       </div>
     </div>
@@ -76,13 +76,16 @@ export default {
       filter_text: '',
     }
   },
+  watch: {
+    selected: {
+      handler() {
+        this.$emit("update:modelValue", this.selected);
+      }
+    }
+  },
   methods: {
     removeSelected(selectToRemove) {
       this.selected.splice(this.selected.findIndex(s=>s[this.descriptor]===selectToRemove[this.descriptor]), 1);
-    },
-    addOption(option) {
-      console.log("PUSH::", option)
-      this.selected.push(option)
     }
   },
   computed: {
