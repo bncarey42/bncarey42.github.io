@@ -7,7 +7,7 @@ defineProps({
   imgAlt: {type: String, required: false},
   callToAction: {type: Function, required: false},
   callToActionMsg: {type: String, required: false},
-  links: {type: String, required: false}
+  links: {type: Array, required: false}
 })
 </script>
 
