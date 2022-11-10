@@ -3,7 +3,8 @@
     <div
         class="inline-flex w-full justify-center items-center rounded-md border border-secondary bg-white px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
       <div class="flex justify-start mr-1 my-2">
-        <div v-for="(selectItem, key) in selected" :key="`select_${key}`" class="flex justify-between items-center bg-accent-2 rounded-full py-1 px-2 mr-1 text-white font-semibold">
+        <div v-for="(selectItem, key) in selected" :key="`select_${key}`"
+             class="flex justify-between items-center border border-accent-2 rounded-lg py-1 px-2 mr-1 text-accent-1 font-semibold">
           <i :class="selectItem.icon" class="mr-1"/>
           <div class="mr-1">{{ selectItem[descriptor] }}</div>
           <button @click="removeSelected(selectItem)"><i class="uil uil-times"></i></button>
@@ -16,7 +17,7 @@
              aria-expanded="true"
              aria-haspopup="true"
              @focusin="hide_options=false"
-             @focusout="hide_options=true; filter_text=null"/>
+             @focusout="filterTextFocusOut()"/>
       <!-- Heroicon name: mini/chevron-down -->
       <button @click="hide_options=!hide_options"
               class="justify-end my-2">
@@ -49,14 +50,13 @@
          tabindex="-1">
       <div class="py-1" role="none">
         <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-        <div v-for="(option,key) in filtered_options" :key="`option_${key}`" role="menuitem"
-             class="px-4 py-2 hover:bg-primary hover:bg-opacity-30" :tabindex="key"
-             >
-          <a href="javascript:void(0)" :id="`option_${key}`" :value="option" @click="selected.push(option)" class="w-full">
-            <i :class="option.icon" class="mr-2" v-if="option.icon"></i>
-            {{ option[descriptor] }}
-          </a>
-        </div>
+        <a v-for="(option,key) in filtered_options" :key="`option_${key}`"
+           role="menuitem"
+           href="javascript:void(0)" :id="`option_${key}`" @click="addSelection(option)"
+           class="px-4 py-2 hover:bg-primary hover:bg-opacity-30 block">
+          <i :class="option.icon" class="mr-2" v-if="option.icon"></i>
+          {{ option[descriptor] }}
+        </a>
       </div>
     </div>
   </div>
@@ -76,21 +76,23 @@ export default {
       filter_text: '',
     }
   },
-  watch: {
-    selected: {
-      handler() {
-        this.$emit("update:modelValue", this.selected);
-      }
-    }
-  },
   methods: {
     removeSelected(selectToRemove) {
-      this.selected.splice(this.selected.findIndex(s=>s[this.descriptor]===selectToRemove[this.descriptor]), 1);
+      this.selected.splice(this.selected.findIndex(s => s[this.descriptor] === selectToRemove[this.descriptor]), 1);
+    },
+    filterTextFocusOut() {
+      setTimeout(() => {
+        this.hide_options = true;
+        this.filter_text = null;
+      }, 300);
+    },
+    addSelection(opt) {
+      this.selected.push(opt)
     }
   },
   computed: {
     filtered_options() {
-      const opt = this.options.filter(o => !this.selected.map(s=>s.title.toLowerCase()).includes(o[this.descriptor].toLowerCase()));
+      const opt = this.options.filter(o => !this.selected.map(s => s.title.toLowerCase()).includes(o[this.descriptor].toLowerCase()));
       return this.filter_text ? opt.filter(o => o[this.descriptor].toLowerCase().includes(this.filter_text.toLowerCase())) : opt;
     },
     selected: {
@@ -98,7 +100,6 @@ export default {
         return this.modelValue;
       },
       set(value) {
-        console.log(value)
         this.$emit("update:modelValue", value);
       },
     },
