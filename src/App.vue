@@ -9,7 +9,7 @@ import Hero from "./components/hero.vue";
 <template>
   <div class="m-4 lg:m-24 pill-scroll font-ubuntu">
     <div class="py-8 relative">
-      <div class="-z-10 absolute top-0 left-0 w-full h-full opacity-50">
+      <div class="-z-10 absolute top-0 left-0 w-full h-full">
         <div class="bg-hex bg-repeat-y h-full rounded-2xl lg:mx-10 mx-4 relative"></div>
       </div>
       <div class="">
