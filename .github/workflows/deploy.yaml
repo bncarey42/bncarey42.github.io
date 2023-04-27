@@ -1,27 +1,24 @@
 name: Build and Deploy to GHPages
 on:
-   push:
-      branches:
-         - main
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
 jobs:
-   build-deploy:
-      runs-on: ubuntu-latest
-      steps:
-       - uses: actions/checkout@v3
-       - name: Build
-         run: |
-            npm ci
-            npm run build
-       - name: git config
-         run: |
-            git --version
-            git config --global user.name [bot]github-actions
-            git config --global user.email bot-github-actions@github.com
-            git config --global init.defaultBranch main
-       - name: deploy
-         env:
-            GITHUB_REPO: https://x-access-token:${{ secrets.TOKEN }}@github.com/${{ github.repository }}
-            GITHUB_BRANCH: main:_gh-pages
-         run: |
-            echo Deploying to GitHub Pages
-            sh ./lib/gh_pages_deploy.sh
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use nodejs
+          uses: actions/setup-node@v3
+          with:
+            node-version: '16.x'
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+          with:
+            folder: dist
