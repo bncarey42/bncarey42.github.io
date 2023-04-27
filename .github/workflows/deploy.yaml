@@ -6,13 +6,12 @@ on:
 jobs:
    build-deploy:
       runs-on: ubuntu-latest
-      concurrency: ci-${{github.ref}}
       steps:
-       - uses: actions/checkout@v3   
+       - uses: actions/checkout@v3
        - name: Build
          run: |
             npm ci
-            npm run build      
+            npm run build
        - name: git config
          run: |
             git --version
@@ -20,10 +19,9 @@ jobs:
             git config --global user.email bot-github-actions@github.com
             git config --global init.defaultBranch main
        - name: deploy
-         run: |
-            echo Deploying to GitHub Pages
-            sh ./lib/gh_pages_deploy.sh
          env:
             GITHUB_REPO: https://x-access-token:${{ secrets.TOKEN }}@github.com/${{ github.repository }}
             GITHUB_BRANCH: main:_gh-pages
-            
+         run: |
+            echo Deploying to GitHub Pages
+            sh ./lib/gh_pages_deploy.sh

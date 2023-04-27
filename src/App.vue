@@ -14,7 +14,7 @@ import Hero from "./components/hero.vue";
       </div>
       <div class="">
         <hero title="Hello there! I'm Ben." :msg="`I am a systems-minded software engineer with a client-focused mindset with ${new Date().getFullYear() - 2017} years of development and engineering experience. I am questioning and curious, focusing on simplifying big problems to implement effective and maintainable solutions.
-        I am a lifelong student searching for ways to expand my understanding of fundamental and complex ideas.`"
+        I am a lifelong learner searching for ways to expand my understanding of fundamental and complex ideas.`"
               :links="sites"
         />
         <card class="flex justify-center" v-if="loading">
