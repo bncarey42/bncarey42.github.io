@@ -29,6 +29,11 @@ import Hero from "./components/hero.vue";
 <script>
 // const loading = ref(true);
 export default {
+ 
+
+
+
+
   data() {
     return {
       resume: {work: []},
