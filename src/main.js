@@ -1,8 +1,6 @@
-// import { createApp } from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-
-
 import './style.css'
 import 'devicon/devicon.min.css'
 
-Vue.createApp(App).mount('#app')
+createApp(App).mount('#app')
