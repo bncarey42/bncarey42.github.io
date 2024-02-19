@@ -1,6 +1,10 @@
 <script>
+
+import linkifyHtml from "linkify-html";
+
 export default {
   name: "Role",
+  methods: {linkifyHtml},
   props: {
     role: {
       type: Object,
@@ -11,7 +15,7 @@ export default {
       required: false,
       default: false
     }
-  },
+  }
 }
 </script>
 
@@ -22,7 +26,7 @@ export default {
       <p class="font-semibold text-primary"> {{ role.startDate }} - {{ role.endDate }}</p>
       <p><span class="font-semibold mr-1" v-if="role.description">{{
           `${project ? "Project" : "Role"} Description:`
-        }}</span>{{ role.description }}</p>
+        }}</span><span v-html="role.description ? linkifyHtml(role.description) : ''"></span></p>
     </div>
     <div v-if="role.technologies?.length" class="mb-3">
       <h4>Technologies:</h4>
@@ -37,7 +41,7 @@ export default {
       <h4>Responsibilities:</h4>
       <div class="pl-3">
         <ul>
-          <li class="list-disc" v-for="(duty, key) in role.duties" :key="key">{{ duty }}</li>
+          <li class="list-disc" v-for="(duty, key) in role.duties" :key="key">{{ linkifyHtml(duty) }}</li>
         </ul>
       </div>
     </div>
