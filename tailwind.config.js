@@ -17,10 +17,6 @@ export const config = {
       danger: '#8e3b3b'
     },
     extend: {
-      backgroundImage: {
-        "torc-head": 'url("../RI:TorcHead:Walkway.jpg")',
-        "causeway": 'url("../NI:GiantsCauseway:Stones.jpg")'
-      },
       fontFamily: {
         'display': ['Inconsolata', "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
       }
