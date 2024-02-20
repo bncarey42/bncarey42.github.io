@@ -2,7 +2,7 @@ import {useState} from "react";
 
 export const Background = () => {
 
-    const [bg] = useState<string>(`w-full h-screen bg-${['torcHead', 'causeway'][Math.floor(Math.random() * 2)]} bg-center relative bg-no-repeat`)
+    const [bg] = useState<string>(`w-full h-screen bg-${['torc-head', 'causeway'][Math.floor(Math.random() * 2)]} bg-center relative`)
 
 
 

@@ -18,7 +18,7 @@ export const config = {
     },
     extend: {
       backgroundImage: {
-        "torcHead": 'url("../RI:TorcHead:Walkway.jpg")',
+        "torc-head": 'url("../RI:TorcHead:Walkway.jpg")',
         "causeway": 'url("../NI:GiantsCauseway:Stones.jpg")'
       },
       fontFamily: {
