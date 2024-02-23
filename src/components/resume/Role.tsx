@@ -1,38 +1,68 @@
+import {ResumeRole} from "../../types.ts";
+// import linkifyHtml from "linkify-html";
+import TechBtn from "../TechBtn.tsx";
 
-const Role = () => {
-    return <div class="mb-3">
-        <div class="mb-3">
-            <h3>{{role.title}}</h3>
-            <p class="font-semibold text-primary"> {{role.startDate}} - {{role.endDate}}</p>
-            <p><span class="font-semibold mr-1" v-if="role.description">{{
-                `${project ? "Project" : "Role"} Description:`
-            }}</span><span v-html="role.description ? linkifyHtml(role.description) : ''"></span></p>
-        </div>
-        <div v-if="role.technologies?.length" class="mb-3">
-            <h4>Technologies:</h4>
-            <ul class="inline-grid grid-cols-3 lg:grid-cols-8 gap-3 w-full">
-                <li class="text-center" v-for="(tech, key) in role.technologies"
-                :key="key">
-                <i :class="tech.icon" class="text-4xl"/>
-                <p>{{tech.title}}</p>
-            </li>
-        </ul>
-    </div>
-    <div v-if="role.duties?.length" class="mb-3">
-        <h4>Responsibilities:</h4>
-        <div class="pl-3">
-            <ul>
-                <li class="list-disc" v-for="(duty, key) in role.duties"
-                :key="key">{{linkifyHtml(duty)}}</li>
-        </ul>
-    </div>
-</div>
-    <div v-if="role.projects?.length" class="mb-3">
-        <h4>Projects:</h4>
-        <div class="pl-3">
-            <role
-            :role="project" project v-for="(project, idx) in role.projects" :key="idx"/>
-        </div>
-    </div>
-</div>
+interface RoleInterface extends ResumeRole {
+    isProject?: boolean;
 }
+
+function linkifyHtml(desc:string) {
+    return desc
+}
+
+const Role = ({
+                  title,
+                  description,
+                  startDate,
+                  endDate,
+                  projects,
+                  duties,
+                  technologies,
+                  isProject = false
+              }: RoleInterface) => {
+    return <div className="mb-3">
+        <div className="mb-3">
+            <h3>{title}</h3>
+            <p className="font-semibold text-primary"> {startDate} - {endDate}</p>
+            {description && <p>
+                <span className="font-semibold mr-1">{
+                    `${isProject ? "Project" : "Role"} Description:`
+                }</span>
+                <span>{description ? linkifyHtml(description) : ''}</span></p>}
+        </div>
+        {technologies?.length && <div className="mb-3">
+            <h4>Technologies:</h4>
+            <ul className="inline-grid grid-cols-3 lg:grid-cols-8 gap-3 w-full">
+                {
+                    technologies.map((tech, key) =>
+                        <TechBtn icon={tech.icon} title={tech.title} onClick={() => {
+                        }} key={key}/>)
+                }
+            </ul>
+        </div>}
+        {duties?.length && <div className="mb-3">
+            <h4>Responsibilities:</h4>
+            <div className="pl-3">
+
+                {typeof duties === 'string' ? linkifyHtml(duties) :
+                    <ul>{duties.map((duty, key) => <li className="list-disc" key={key}>{linkifyHtml(duty)}</li>)}</ul>}
+
+            </div>
+        </div>}
+        {
+            projects?.length &&
+            <div className="mb-3">
+                <h4>Projects:</h4>
+                <div className="pl-3">
+                    {projects.map((project, idx) => <Role title={project.title} description={project.description}
+                                                          duties={project.duties} technologies={project.technologies}
+                                                          startDate={project.startDate} endDate={project.endDate}
+                                                          isProject={true}
+                                                          key={idx}/>)}
+                </div>
+            </div>
+        }
+    </div>
+}
+
+export default Role;
