@@ -1,3 +1,5 @@
+import Employer from "./components/resume/Employer.tsx";
+
 export type Link = {
     icon?: string;
     href: string;
@@ -25,6 +27,14 @@ export type ResumeRole = {
     projects?: ResumeRole[];
 }
 
+
+export type ResumeEmployer = {
+    employer: string;
+    startDate: string;
+    endDate: string;
+    roles: ResumeRole[];
+}
+
 export type Courses = {
     title: string;
     semester: string;
@@ -42,5 +52,5 @@ export type Education = {
 
 export type Resume = {
     education: Education[]
-    work: ResumeRole[]
+    work: ResumeEmployer[]
 }

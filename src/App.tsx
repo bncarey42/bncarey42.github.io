@@ -4,6 +4,7 @@ import Header from "./components/Header.tsx";
 import {useEffect, useState} from "react";
 import {Resume} from "./types.ts";
 import Role from "./components/resume/Role.tsx";
+import Employer from "./components/resume/Employer.tsx";
 
 function App() {
     const [loading, setLoading] = useState<boolean>(true)
@@ -30,7 +31,7 @@ function App() {
     return (
         <Background>
             <div className={"h-screen"}>
-                <div className={"mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0"}>
+                <div className={"mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-8 lg:py-0"}>
                     <div className={"lg:flex lg:justify-between lg:gap-4 "}>
                         <Header title={"Ben Carey"} subtitle={"Subtitle"} tagline={"Software Engineer"} links={[{
                             showTitle: false,
@@ -51,32 +52,19 @@ function App() {
                             </div>
 
                             <div className={'section'}>
-                                {!loading && resume?.work.filter(() => true).map((role, idx) =>
-                                    <Role title={role.title}
-                                          startDate={role.startDate}
-                                          endDate={role.endDate}
-                                          technologies={role.technologies}
-                                          description={role.description}
-                                          duties={role.duties}
-                                          projects={role.projects}
-                                          key={idx}
-                                    />)}
+                                <h2>Experience</h2>
+                                {
+                                    resume?.work.map((employer, idx) =>
+                                        <Employer
+                                            employer={employer.employer}
+                                            startDate={employer.startDate}
+                                            endDate={employer.endDate}
+                                            roles={employer.roles}/>)
+                                }
                             </div>
                         </div>
                     </div>
-                    {/*<div className={'grid gap-3 grid-cols-4'}>
-                        <div className={'rounded-tl-lg'}></div>
-                        <div className={"col-span-3 rounded-tr-lg px-8 py-6"}></div>
 
-                        <div className={"h-full px-3 space-y-8 "}>
-                            <h2>Skills</h2>
-                            <h2>Education</h2>
-                            <h2>Contact/Social</h2>
-                        </div>
-                        <div className={"h-full col-span-3 space-y-8"}>
-
-                        </div>
-                    </div>*/}
                 </div>
 
             </div>

@@ -6,7 +6,7 @@ interface RoleInterface extends ResumeRole {
     isProject?: boolean;
 }
 
-function linkifyHtml(desc:string) {
+function linkifyHtml(desc: string) {
     return desc
 }
 
@@ -22,7 +22,7 @@ const Role = ({
               }: RoleInterface) => {
     return <div className="mb-3">
         <div className="mb-3">
-            <h3>{title}</h3>
+            <h4 className={"font-semibold"}>{title}</h4>
             <p className="font-semibold text-primary"> {startDate} - {endDate}</p>
             {description && <p>
                 <span className="font-semibold mr-1">{
@@ -32,7 +32,7 @@ const Role = ({
         </div>
         {technologies?.length && <div className="mb-3">
             <h4>Technologies:</h4>
-            <ul className="inline-grid grid-cols-3 lg:grid-cols-8 gap-3 w-full">
+            <ul className="inline-grid grid-cols-4 lg:grid-cols-6 gap-3 w-full">
                 {
                     technologies.map((tech, key) =>
                         <TechBtn icon={tech.icon} title={tech.title} onClick={() => {
