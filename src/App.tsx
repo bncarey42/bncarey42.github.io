@@ -3,7 +3,6 @@ import {Background} from "./components/Background.tsx";
 import Header from "./components/Header.tsx";
 import {useEffect, useState} from "react";
 import {Resume} from "./types.ts";
-import Role from "./components/resume/Role.tsx";
 import Employer from "./components/resume/Employer.tsx";
 
 function App() {
@@ -31,8 +30,8 @@ function App() {
     return (
         <Background>
             <div className={"h-screen"}>
-                <div className={"mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-8 lg:py-0"}>
-                    <div className={"lg:flex lg:justify-between lg:gap-4 "}>
+                <div className={"mx-auto min-h-screen max-w-screen-2xl px-6 py-12 md:px-12 md:py-20 lg:px-8 lg:py-0"}>
+                    <div className={"lg:flex lg:justify-between lg:gap-4"}>
                         <Header title={"Ben Carey"} subtitle={"Subtitle"} tagline={"Software Engineer"} links={[{
                             showTitle: false,
                             icon: 'devicon-github-original ',
@@ -40,7 +39,7 @@ function App() {
                             href: 'https://github.com/bncarey42'
                         }]} pages={[]} skills={[]} photo={'https://avatars.githubusercontent.com/u/11987913?v=4'}/>
 
-                        <div className={"lg:w-1/2 lg:py-24 "}>
+                        <div className={"lg:w-2/3 lg:py-24 "}>
                             <div className={"section"}>
                                 <h2>Hello There</h2>
                                 <p>I am a systems-minded software engineer with a client-focused mindset
@@ -59,7 +58,8 @@ function App() {
                                             employer={employer.employer}
                                             startDate={employer.startDate}
                                             endDate={employer.endDate}
-                                            roles={employer.roles}/>)
+                                            roles={employer.roles}
+                                            key={idx}/>)
                                 }
                             </div>
                         </div>
